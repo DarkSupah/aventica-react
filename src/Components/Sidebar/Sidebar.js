@@ -21,6 +21,7 @@ const Sidebar = (props) => {
                                           id={ item.id }
                                           removeDraft={ props.removeDraft }
                                           toSavedItem = { props.toSavedItem }
+                                          changeDraftName = { props.changeDraftName }
                         />
                     }) }
                 </ul>

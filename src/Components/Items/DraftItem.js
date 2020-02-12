@@ -5,7 +5,7 @@ const DraftItem = (props) => {
 
     return(
         <li className="item">
-            <span>{ props.text }</span>
+            <input className="form-control" type="text" value={ props.text } onChange={ (e) => { props.changeDraftName(e.target.value, id) } }/>
             <div className="mt-4 btn-group d-flex w-100">
                 <button type="button" className="btn btn-danger" onClick={ () => { props.removeDraft(id) } }>Remove</button>
                 <button type="button" className="btn btn-outline-success" onClick={ () => { props.toSavedItem(id) } }>Save</button>

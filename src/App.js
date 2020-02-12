@@ -26,6 +26,20 @@ class App extends Component {
 
         this.toSavedItem = this.toSavedItem.bind(this);
         this.toDraftItem = this.toDraftItem.bind(this);
+
+        this.changeDraftName = this.changeDraftName.bind(this);
+    }
+
+    changeDraftName(text, id){
+        this.setState({
+            draftItems: this.state.draftItems.map( item => {
+                if(item.id === id){
+                    item.text = text;
+                }
+
+                return item;
+            })
+        })
     }
 
     changeMark(id){
@@ -137,6 +151,7 @@ class App extends Component {
                                      draftItems = { this.state.draftItems }
                                      getCardName = { this.getCardName }
                                      toSavedItem = { this.toSavedItem }
+                                     changeDraftName = { this.changeDraftName }
                             />
                         </div>
                         <div className="col-md-9">
