@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body{
+    padding: 10px;
+}
+.panel{
+    padding: 10px;
+    box-shadow: #ddd 0 0 4px 1px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+h1{
+    font-size: 32px;
+}
+span.saved-count{
+    font-size: 32px;
+    padding: 0 16px;
+    margin-left: 20px;
+    box-shadow: 0 0 2px 1px #ef6a3a;
+}
+form{
+    margin-bottom: 20px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul li{
+    margin: 0;
+    padding: 0;
+}
+ul li span{
+    font-size: 18px;
+}
+li.item{
+    position: relative;
+    box-shadow: #eee 0 0 3px 2px;
+    padding: 10px;
+}
+li.item:not(:last-child){
+    margin-bottom: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.saved-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: row;
+    flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.saved-item{
+    display: block;
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+    flex: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.items-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.indicator{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+    background-color: #aaa;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.indicator.undone{
+    background-color: red;
+}
+.indicator.done{
+    background-color: green;
 }
